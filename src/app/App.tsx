@@ -1,13 +1,17 @@
 import { AppHeader } from "@/features/header";
-import { Outlet } from "react-router-dom";
+import { ROUTES } from "@/shared/model/routes";
+import { Outlet, useLocation } from "react-router-dom"; 
 
-function App() {
+export function App() {
+  const location = useLocation();
+
+  const isAuthenticated =
+    location.pathname === ROUTES.LOGIN || location.pathname === ROUTES.REGISTER;
+
   return (
     <div className="App">
-      <AppHeader />
+      {!isAuthenticated && <AppHeader />}
       <Outlet />
     </div>
   );
 }
-
-export default App;
