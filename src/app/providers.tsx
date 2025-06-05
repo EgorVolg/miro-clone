@@ -1,4 +1,3 @@
- 
 import { queryClient } from "@/shared/api/query-client";
 import { QueryClientProvider } from "@tanstack/react-query";
 
