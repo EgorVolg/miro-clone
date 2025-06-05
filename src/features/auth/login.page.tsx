@@ -2,4 +2,4 @@ const LoginPage = () => {
   return <div>LoginPage</div>;
 };
 
-export const Component = LoginPage;
+export const Component = LoginPage
